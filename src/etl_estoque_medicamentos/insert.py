@@ -1,13 +1,16 @@
 import pandas as pd 
 import psycopg2
 from etl_estoque_medicamentos.conexao import conectar
+from dotenv import load_dotenv
+import os
 
-caminho_grupo = r"C:\Users\Administrador\Desktop\COISAS\Tudo de Projetos\Projetos de Dados e Outros\etl-estoque-medicamentos\dados\grupos.csv"
-caminho_unidades = r"C:\Users\Administrador\Desktop\COISAS\Tudo de Projetos\Projetos de Dados e Outros\etl-estoque-medicamentos\dados\unidades.csv"
-caminho_produtos = r"C:\Users\Administrador\Desktop\COISAS\Tudo de Projetos\Projetos de Dados e Outros\etl-estoque-medicamentos\dados\podutos.csv"
-caminho_estoques = r"C:\Users\Administrador\Desktop\COISAS\Tudo de Projetos\Projetos de Dados e Outros\etl-estoque-medicamentos\dados\estoques.csv"
-caminho_produto_estoque =r"C:\Users\Administrador\Desktop\COISAS\Tudo de Projetos\Projetos de Dados e Outros\etl-estoque-medicamentos\dados\produto_estoque.csv"
+load_dotenv()  # lê o arquivo .env
 
+caminho_grupo = os.getenv('CAMINHO_GRUPO')
+caminho_unidades = os.getenv('CAMINHO_UNIDADES')
+caminho_produtos = os.getenv('CAMINHO_PRODUTOS')
+caminho_estoques = os.getenv('CAMINHO_ESTOQUES')
+caminho_produto_estoque = os.getenv('CAMINHO_PRODUTO_ESTOQUE')
 df_grupos = pd.read_csv(caminho_grupo, header=0)
 df_unidades = pd.read_csv(caminho_unidades, header=0)
 df_produtos = pd.read_csv(caminho_produtos, header=0)
