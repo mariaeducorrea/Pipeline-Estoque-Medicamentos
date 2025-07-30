@@ -1,6 +1,0 @@
-{
-    "typescript.tsserver.web.projectWideIntellisense.enabled": true,
-    "editor.suggest.matchOnWordStartOnly": false,
-    "editor.suggest.showClasses": true,
-    "typescript.tsserver.web.typeAcquisition.enabled": true
-}
