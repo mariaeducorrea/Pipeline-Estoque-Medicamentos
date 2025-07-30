@@ -1,0 +1,21 @@
+[project]
+name = "etl-estoque-medicamentos"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Maria Eduarda",email = "mariaeducorrea2502@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg2 (>=2.9.10,<3.0.0)",
+    "pandas (>=2.3.1,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "etl_estoque_medicamentos", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
