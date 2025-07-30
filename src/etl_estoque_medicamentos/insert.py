@@ -11,13 +11,14 @@ caminho_unidades = os.getenv('CAMINHO_UNIDADES')
 caminho_produtos = os.getenv('CAMINHO_PRODUTOS')
 caminho_estoques = os.getenv('CAMINHO_ESTOQUES')
 caminho_produto_estoque = os.getenv('CAMINHO_PRODUTO_ESTOQUE')
+
+
 df_grupos = pd.read_csv(caminho_grupo, header=0)
 df_unidades = pd.read_csv(caminho_unidades, header=0)
 df_produtos = pd.read_csv(caminho_produtos, header=0)
 df_estoques = pd.read_csv(caminho_estoques, header=0)
 df_produto_estoque = pd.read_csv(caminho_produto_estoque, header=0)
 
-print(df_produto_estoque.head())
 
 conn = conectar()
 
